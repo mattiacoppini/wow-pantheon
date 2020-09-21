@@ -7,7 +7,7 @@ export default {
   paddingXxs: 5,
   paddingSm: 10,
   paddingMd: 15,
-  paddingLg: 20,
+  paddingLg: 25,
 
   fontSizeSm: "0.8rem",
   fontSizeMd: "1rem",
