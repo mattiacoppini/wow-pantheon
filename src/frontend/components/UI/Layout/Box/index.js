@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 export const Box = styled.div`
   background: ${({ background }) => background};
+  color: ${({ color }) => color};
   z-index: ${({ elevation }) => elevation};
   display: ${({ display }) => display};
   position: ${({ position }) => position};
@@ -48,12 +49,19 @@ export const Box = styled.div`
     css`
       width: 100%;
     `}
+  ${({ fullHeight }) =>
+    fullHeight &&
+    css`
+      height: 100%;
+    `}
 `;
 
 Box.propTypes = {
   children: PropTypes.any,
   /** Sets the CSS background property */
   background: PropTypes.string,
+  /** Sets the CSS color property */
+  color: PropTypes.string,
   /** z-index value */
   elevation: PropTypes.number,
   /** Sets the CSS display property */
@@ -143,6 +151,10 @@ Box.propTypes = {
   flexShrink: PropTypes.number,
   /** Defines flex basis index */
   flexBasis: PropTypes.string,
+  /** If true, will take 100% width */
+  fullWidth: PropTypes.bool,
+  /** If true, will take 100% height */
+  fullHeight: PropTypes.bool,
 };
 
 Box.defaultProps = {

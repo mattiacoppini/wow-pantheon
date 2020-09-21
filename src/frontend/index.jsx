@@ -1,20 +1,30 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { MemoryRouter } from 'react-router-dom';
-import './global.less';
-import App from './components/App';
+import React from "react";
+import ReactDOM from "react-dom";
+import { MemoryRouter } from "react-router-dom";
+import "./global.less";
+import App from "./components/App";
 
-document.addEventListener('dragover', (e) => {
+document.addEventListener(
+  "dragover",
+  (e) => {
     e.preventDefault();
     return false;
-}, false);
+  },
+  false
+);
 
-document.addEventListener('drop', (e) => {
+document.addEventListener(
+  "drop",
+  (e) => {
     e.preventDefault();
     return false;
-}, false);
+  },
+  false
+);
 
 ReactDOM.render(
-    <MemoryRouter>
-        <App />
-    </MemoryRouter> , document.getElementById('root'));
+  <MemoryRouter initialEntries={["/explore"]}>
+    <App />
+  </MemoryRouter>,
+  document.getElementById("root")
+);
