@@ -34,20 +34,20 @@ export default function Navbar() {
       borderStyle="solid"
     >
       <FlexBox className="left-side">
-        <LinkBox padding={[UIToken.paddingSm]}>
+        <LinkBox padding={[UIToken.spacingSm]}>
           <NavLink exact to="/">
             Logo
           </NavLink>
         </LinkBox>
-        <LinkBox padding={[UIToken.paddingSm]}>
+        <LinkBox padding={[UIToken.spacingSm]}>
           <NavLink to="/my-addons">My addons</NavLink>
         </LinkBox>
-        <LinkBox padding={[UIToken.paddingSm]}>
+        <LinkBox padding={[UIToken.spacingSm]}>
           <NavLink to="/explore">Explore</NavLink>
         </LinkBox>
       </FlexBox>
       <FlexBox className="right-side">
-        <LinkBox padding={[UIToken.paddingSm]}>
+        <LinkBox padding={[UIToken.spacingSm]}>
           <NavLink to="/options">Options</NavLink>
         </LinkBox>
       </FlexBox>

@@ -4,6 +4,7 @@ import Box from "../../components/UI/Layout/Box";
 import FlexBox from "../../components/UI/Layout/FlexBox";
 import mockAddonsList from "../../mocks/mockAddonsList";
 import UIToken from "../../utils/UIToken";
+import { AddonsList } from "./components/AddonsList";
 import SearchForm from "./components/SearchForm";
 
 const H1 = styled.h1`
@@ -30,12 +31,15 @@ const Explore = () => {
       color={UIToken.secondaryColor}
       fullWidth
       fullHeight
-      padding={[UIToken.paddingLg]}
+      padding={[UIToken.spacingLg]}
     >
       <H1>Explore</H1>
-      <FlexBox fullWidth>
+      <Box fullWidth>
         <SearchForm onSubmitCallback={searchAddons} />
-      </FlexBox>
+      </Box>
+      <Box fullWidth fullHeight margin={[UIToken.spacingMd, 0]}>
+        <AddonsList addonsList={addonsList} loading={loadingList} />
+      </Box>
     </Box>
   );
 };

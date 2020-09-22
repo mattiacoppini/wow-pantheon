@@ -8,12 +8,12 @@ const OutlinedInput = styled.input`
   background-color: transparent;
   border: 1px solid ${UIToken.secondaryColor};
   color: ${UIToken.secondaryColor};
-  padding: ${UIToken.paddingMd}px;
+  padding: ${UIToken.spacingMd}px;
   font-size: ${UIToken.fontSizeMd};
 `;
 
 const OutlinedButton = styled.button`
-  padding: ${UIToken.paddingMd}px;
+  padding: ${UIToken.spacingMd}px;
   font-size: ${UIToken.fontSizeMd};
   border: 1px solid ${UIToken.secondaryColor};
   outline: none;
